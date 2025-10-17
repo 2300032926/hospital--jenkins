@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "../App.css";
+import config from './config';  
+
 
 export default function Login() {
   const [form, setForm] = useState({ username: "", password: "" });
@@ -10,7 +12,8 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8081/auth/login", form);
+      const res = await axios.post(`${config.url}/auth/login`, form);
+
       localStorage.setItem("token", res.data);
       localStorage.setItem("username", form.username);
       navigate("/dashboard");
