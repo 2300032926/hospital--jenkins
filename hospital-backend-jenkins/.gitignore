@@ -1,0 +1,27 @@
+# ==== Maven / Gradle build ====
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ==== IDE / Eclipse / STS / IntelliJ ====
+.metadata/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+.idea
+*.iws
+*.iml
+*.ipr
+
+# ==== OS / editor files ====
+.DS_Store
+Thumbs.db
+*.log
